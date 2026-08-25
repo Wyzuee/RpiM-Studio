@@ -1,0 +1,80 @@
+name: Build and Release RpiM Studio
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/release-trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: 'utf-8'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Inno Setup
+        shell: powershell
+        run: choco install innosetup -y --no-progress
+      - name: Build Windows installer
+        shell: powershell
+        run: python BUILD_RELEASE.py
+      - name: Prepare release asset
+        shell: powershell
+        run: |
+          New-Item -ItemType Directory -Force release_upload | Out-Null
+          Copy-Item installer_output\RpiM_Studio_Setup_v53.exe release_upload\RpiM_Studio_Setup.exe
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-release
+          path: release_upload/RpiM_Studio_Setup.exe
+          if-no-files-found: error
+
+  macos:
+    runs-on: macos-latest
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: 'utf-8'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build macOS DMG
+        run: python3 BUILD_RELEASE.py
+      - name: Prepare release asset
+        run: |
+          mkdir -p release_upload
+          cp release_output/RpiM_Studio_v53_macOS.dmg release_upload/RpiM_Studio_macOS.dmg
+      - uses: actions/upload-artifact@v4
+        with:
+          name: macos-release
+          path: release_upload/RpiM_Studio_macOS.dmg
+          if-no-files-found: error
+
+  release:
+    needs: [windows, macos]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: release_files
+          merge-multiple: true
+      - name: Publish v53 release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v53
+          name: RπM Studio v53
+          make_latest: true
+          generate_release_notes: true
+          files: |
+            release_files/RpiM_Studio_Setup.exe
+            release_files/RpiM_Studio_macOS.dmg
