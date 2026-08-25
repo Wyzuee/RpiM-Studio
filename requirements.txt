@@ -2,6 +2,8 @@
 PySide6>=6.8,<7
 # Euler managed WebSocket client
 websockets>=15,<17
+# TLS CA bundle for frozen Windows/macOS builds
+certifi>=2025.8.3
 # PDF reports
 reportlab>=4.2,<5
 # HTTP/profile requests
