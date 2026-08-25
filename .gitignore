@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.buildvenv/
+.setupvenv/
+
+# Builds
+build/
+dist/
+installer_output/
+release_output/
+*.spec
+
+# Local app/runtime data
+*.db
+*.sqlite
+*.sqlite3
+*.log
+.env
+.env.*
+!*.env.example
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local caches
+avatar_cache/
+avatar_hq_cache/
+cache/
+reports/
+exports/

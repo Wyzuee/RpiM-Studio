@@ -1,0 +1,16 @@
+# Core desktop UI
+PySide6>=6.8,<7
+# Euler managed WebSocket client
+websockets>=15,<17
+# PDF reports
+reportlab>=4.2,<5
+# HTTP/profile requests
+requests>=2.32,<3
+# Local TTS fallback (Windows/macOS)
+pyttsx3>=2.98,<3
+# MP3/OGG/etc. event sound + Edge neural TTS playback
+playsound3>=3.2,<4
+edge-tts>=7.0,<8
+pygame-ce>=2.5,<3
+# Windows speech / COM support for pyttsx3
+pywin32>=308; platform_system=="Windows"
