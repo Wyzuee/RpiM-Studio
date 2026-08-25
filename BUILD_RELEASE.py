@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-VERSION = "53"
+VERSION = "54"
 APP_INTERNAL = "RpiMStudio"
 APP_DISPLAY = "RπM Studio"
 APP_CONSOLE = "RpiM Studio"
@@ -45,6 +45,9 @@ def pyinstaller_common(py: Path):
     cmd = [
         str(py), "-m", "PyInstaller", "--noconfirm", "--clean", "--windowed",
         "--name", APP_INTERNAL,
+        # certifi's cacert.pem must be physically inside the frozen app. This
+        # fixes macOS CERTIFICATE_VERIFY_FAILED errors on HTTPS/WSS connections.
+        "--collect-data", "certifi",
         "--collect-all", "edge_tts",
         "--collect-all", "pygame",
         "--hidden-import", "pyttsx3.drivers",
@@ -69,11 +72,20 @@ def find_iscc() -> Path | None:
     return None
 
 
+def verify_frozen_ca_bundle(root: Path):
+    ca_files = [p for p in root.rglob("cacert.pem") if p.is_file() and p.stat().st_size > 100_000]
+    if not ca_files:
+        raise RuntimeError("Frozen pakette certifi/cacert.pem bulunamadı; TLS bağlantıları güvenli biçimde doğrulanamaz.")
+    print("TLS CA bundle packaged:", ca_files[0])
+
+
 def build_windows(py: Path):
     pyinstaller_common(py)
-    exe = ROOT / "dist" / APP_INTERNAL / f"{APP_INTERNAL}.exe"
+    app_dir = ROOT / "dist" / APP_INTERNAL
+    exe = app_dir / f"{APP_INTERNAL}.exe"
     if not exe.is_file():
         raise RuntimeError(f"EXE oluşturulamadı: {exe}")
+    verify_frozen_ca_bundle(app_dir)
 
     iscc = find_iscc()
     if not iscc and shutil.which("winget"):
@@ -97,6 +109,7 @@ def build_macos(py: Path):
     app = ROOT / "dist" / f"{APP_INTERNAL}.app"
     if not app.is_dir():
         raise RuntimeError(f".app oluşturulamadı: {app}")
+    verify_frozen_ca_bundle(app)
 
     stage = ROOT / "build" / "dmg_stage"
     if stage.exists():
