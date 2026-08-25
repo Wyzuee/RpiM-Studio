@@ -27,8 +27,10 @@ jobs:
           base64 -d /tmp/rpim-source.tar.xz.b64 > /tmp/rpim-source.tar.xz
           xz -t /tmp/rpim-source.tar.xz
           tar -xJf /tmp/rpim-source.tar.xz -C .
+          # Keep the currently-authorized bootstrap workflow unchanged during the bot push.
+          # The permanent release workflow is installed separately after this run finishes.
+          rm -f .github/workflows/release.yml
           rm -rf bootstrap
-          rm -f .github/workflows/bootstrap-release.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
