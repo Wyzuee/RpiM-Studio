@@ -31,7 +31,7 @@ jobs:
         shell: powershell
         run: |
           New-Item -ItemType Directory -Force release_upload | Out-Null
-          Copy-Item installer_output\RpiM_Studio_Setup_v53.exe release_upload\RpiM_Studio_Setup.exe
+          Copy-Item installer_output\RpiM_Studio_Setup_v54.exe release_upload\RpiM_Studio_Setup.exe
       - uses: actions/upload-artifact@v4
         with:
           name: windows-release
@@ -50,10 +50,13 @@ jobs:
           python-version: '3.12'
       - name: Build macOS DMG
         run: python3 BUILD_RELEASE.py
+      - name: Verify CA bundle inside app
+        run: |
+          find dist/RpiMStudio.app -name cacert.pem -type f -print -quit | grep -q cacert.pem
       - name: Prepare release asset
         run: |
           mkdir -p release_upload
-          cp release_output/RpiM_Studio_v53_macOS.dmg release_upload/RpiM_Studio_macOS.dmg
+          cp release_output/RpiM_Studio_v54_macOS.dmg release_upload/RpiM_Studio_macOS.dmg
       - uses: actions/upload-artifact@v4
         with:
           name: macos-release
@@ -68,13 +71,15 @@ jobs:
         with:
           path: release_files
           merge-multiple: true
-      - name: Publish v53 release
+      - name: Publish v54 release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v53
-          name: RπM Studio v53
+          tag_name: v54
+          name: RπM Studio v54 - macOS TLS Fix
           make_latest: true
           generate_release_notes: true
+          body: |
+            macOS LIVE connection fix: the frozen app now bundles a Mozilla CA trust store via certifi and configures Python/OpenSSL to use it for HTTPS and WSS connections. Certificate verification remains enabled.
           files: |
             release_files/RpiM_Studio_Setup.exe
             release_files/RpiM_Studio_macOS.dmg
