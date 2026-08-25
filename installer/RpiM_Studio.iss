@@ -1,5 +1,5 @@
 #define MyAppName "RπM Studio"
-#define MyAppVersion "1.5.3"
+#define MyAppVersion "1.5.4"
 #define MyAppPublisher "RπM Studio"
 #define MyAppExeName "RpiMStudio.exe"
 
@@ -14,7 +14,7 @@ DisableProgramGroupPage=yes
 PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
 OutputDir=..\installer_output
-OutputBaseFilename=RpiM_Studio_Setup_v53
+OutputBaseFilename=RpiM_Studio_Setup_v54
 UninstallDisplayIcon={app}\{#MyAppExeName}
 Compression=lzma2/max
 SolidCompression=yes
@@ -24,7 +24,7 @@ ArchitecturesInstallIn64BitMode=x64compatible
 CloseApplications=yes
 RestartApplications=no
 MinVersion=10.0.17763
-VersionInfoVersion=1.5.3.0
+VersionInfoVersion=1.5.4.0
 VersionInfoProductName={#MyAppName}
 VersionInfoDescription=TikTok LIVE creator control studio
 
