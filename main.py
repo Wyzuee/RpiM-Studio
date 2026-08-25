@@ -5,6 +5,13 @@ import shutil
 import sys
 import traceback
 
+from network_tls import configure_tls_environment
+
+# Configure certificate verification before importing any networking/auth modules.
+# This is especially important for the frozen macOS .app, whose Python/OpenSSL
+# runtime doesn't automatically inherit Safari/Keychain trust in every setup.
+TLS_CA_BUNDLE = configure_tls_environment()
+
 from app_paths import APP_NAME, account_data_root, app_data_root, logs_root
 
 BASE = Path(__file__).resolve().parent
