@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parent
 VERSION = "53"
 APP_INTERNAL = "RpiMStudio"
 APP_DISPLAY = "RπM Studio"
+APP_CONSOLE = "RpiM Studio"
 
 
 def run(cmd, *, shell=False):
@@ -120,7 +121,8 @@ def build_macos(py: Path):
 def main():
     system = platform.system()
     print("=" * 68)
-    print(f"{APP_DISPLAY} v{VERSION} • Cross-platform Release Builder")
+    # Keep the console banner ASCII-safe on Windows code pages; the app itself stays RπM Studio.
+    print(f"{APP_CONSOLE} v{VERSION} - Cross-platform Release Builder")
     print(f"Platform: {system} {platform.machine()}")
     print("=" * 68)
     if system not in {"Windows", "Darwin"}:
