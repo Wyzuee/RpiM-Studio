@@ -1,3 +1,4 @@
+# Source chunks verified against the local v53 archive.
 name: Bootstrap Source and Release
 
 on:
