@@ -6,7 +6,7 @@ TikTok LIVE yayınları için masaüstü kontrol uygulaması.
 
 Yeni sürüm dosyaları GitHub Releases alanında yayınlanır:
 
-- Windows: `RpiM_Studio_Setup_v59.exe`
+- Windows: `RpiM_Studio_Beta_v1.0.0_Setup.exe`
 - macOS: `RpiM_Studio_macOS.dmg`
 
 > Bu depo yalnızca yayın ve kurulum sayfasıdır. Kaynak kodu burada yayımlanmaz.
@@ -14,7 +14,7 @@ Yeni sürüm dosyaları GitHub Releases alanında yayınlanır:
 ## Kurulum
 
 1. İşletim sisteminize uygun dosyayı **Releases** sayfasından indirin.
-2. Windows'ta `RpiM_Studio_Setup_v59.exe` dosyasını çalıştırın.
+2. Windows'ta `RpiM_Studio_Beta_v1.0.0_Setup.exe` dosyasını çalıştırın.
 3. Uygulamayı açın, giriş yapın ve TikTok yayıncı adınızı kontrol edin.
 
 ## Euler API kurulumu
@@ -33,5 +33,5 @@ Uygulama açılışta GitHub Releases alanını kontrol eder. Yeni sürüm varsa
 
 Yeni sürüm yayımlarken Release’e yalnız şu dosya adlarını ekleyin:
 
-- `RpiM_Studio_Setup_v59.exe`
+- `RpiM_Studio_Beta_v1.0.0_Setup.exe`
 - `RpiM_Studio_macOS.dmg`
