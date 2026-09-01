@@ -2,9 +2,9 @@
 
 TikTok LIVE yayınları için masaüstü kontrol uygulaması.
 
-## Beta v1.0.0 — İlk sürüm
+## Beta v1.0.1
 
-- **Windows hazır:** `RpiM_Studio_Beta_v1.0.0_Setup.exe`
+- **Windows hazır:** `RpiM_Studio_Beta_v1.0.1_Setup.exe`
 - **macOS:** DMG paketi henüz yayımlanmadı.
 
 [Windows & MacOS kurulum dosyasını Releases sayfasından indir](https://github.com/Wyzuee/RpiM-Studio/releases/latest)
