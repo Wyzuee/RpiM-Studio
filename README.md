@@ -5,7 +5,7 @@ TikTok LIVE yayınları için masaüstü kontrol uygulaması.
 ## Beta v1.0.1
 
 - **Windows hazır:** `RpiM_Studio_Beta_v1.0.1_Setup.exe`
-- **macOS:** DMG paketi henüz yayımlanmadı.
+- **macOS:** 'RpiM_Studio_Beta_v1.0.1_macOS.dmg'
 
 [Windows & MacOS kurulum dosyasını Releases sayfasından indir](https://github.com/Wyzuee/RpiM-Studio/releases/latest)
 
@@ -13,7 +13,7 @@ TikTok LIVE yayınları için masaüstü kontrol uygulaması.
 
 ## Windows kurulumu
 
-1. **Releases** sayfasındaki `RpiM_Studio_Beta_v1.0.0_Setup.exe` dosyasını indirin.
+1. **Releases** sayfasındaki `RpiM_Studio_Beta_v1.0.1_Setup.exe` dosyasını indirin.
 2. Dosyayı çalıştırın ve kurulum sihirbazını tamamlayın.
 3. Uygulamayı açın, giriş yapın ve TikTok yayıncı adınızı kontrol edin.
 
@@ -21,7 +21,7 @@ TikTok LIVE yayınları için masaüstü kontrol uygulaması.
 
 macOS için DMG yayımlandığında aynı Releases sayfasında şu adla yer alır:
 
-`RpiM_Studio_Beta_vX.Y.Z_macOS.dmg`
+`RpiM_Studio_Beta_v1.0.1_macOS.dmg`
 
 ## Euler API kurulumu
 
