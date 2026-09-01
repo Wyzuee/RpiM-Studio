@@ -52,3 +52,7 @@ Dosya adlandırma kuralı:
 - macOS: `RpiM_Studio_Beta_vX.Y.Z_macOS.dmg`
 
 Windows ve macOS paketleri aynı Release altında veya ayrı Releases altında yayımlanabilir. Uygulama kendi işletim sistemine uygun en yeni paketi seçer.
+
+## Uygulama görselleri
+
+Güncel uygulama paketi arayüz önizlemesini ve masaüstü kısayol simgesini içerir. Uygulamada **Kontrol Merkezi → Görseller** düğmesine basarak bu görselleri açabilirsiniz.
