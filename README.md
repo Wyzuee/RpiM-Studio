@@ -55,4 +55,10 @@ Windows ve macOS paketleri aynı Release altında veya ayrı Releases altında y
 
 ## Uygulama görselleri
 
-Güncel uygulama paketi arayüz önizlemesini ve masaüstü kısayol simgesini içerir. Uygulamada **Kontrol Merkezi → Görseller** düğmesine basarak bu görselleri açabilirsiniz.
+### Arayüz önizlemesi
+
+![RπM Studio arayüz önizlemesi](https://github.com/Wyzuee/RpiM-Studio/raw/main/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202026-09-02%20015610.png)
+
+### Masaüstü kısayolu
+
+![RπM Studio masaüstü kısayolu](https://github.com/Wyzuee/RpiM-Studio/raw/main/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202026-08-26%20143315.png)
