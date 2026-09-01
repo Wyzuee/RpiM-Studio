@@ -2,20 +2,26 @@
 
 TikTok LIVE yayınları için masaüstü kontrol uygulaması.
 
-## İndir
+## Beta v1.0.0 — İlk sürüm
 
-Yeni sürüm dosyaları GitHub Releases alanında yayınlanır:
+- **Windows hazır:** `RpiM_Studio_Beta_v1.0.0_Setup.exe`
+- **macOS:** DMG paketi henüz yayımlanmadı.
 
-- Windows: `RpiM_Studio_Beta_v1.0.0_Setup.exe`
-- macOS: `RpiM_Studio_macOS.dmg`
+[Windows kurulum dosyasını Releases sayfasından indir](https://github.com/Wyzuee/RpiM-Studio/releases/latest)
 
-> Bu depo yalnızca yayın ve kurulum sayfasıdır. Kaynak kodu burada yayımlanmaz.
+> Bu depo yalnızca yayın, kurulum ve güncelleme sayfasıdır. Kaynak kodu burada yayımlanmaz.
 
-## Kurulum
+## Windows kurulumu
 
-1. İşletim sisteminize uygun dosyayı **Releases** sayfasından indirin.
-2. Windows'ta `RpiM_Studio_Beta_v1.0.0_Setup.exe` dosyasını çalıştırın.
+1. **Releases** sayfasındaki `RpiM_Studio_Beta_v1.0.0_Setup.exe` dosyasını indirin.
+2. Dosyayı çalıştırın ve kurulum sihirbazını tamamlayın.
 3. Uygulamayı açın, giriş yapın ve TikTok yayıncı adınızı kontrol edin.
+
+## macOS kurulumu
+
+macOS için DMG yayımlandığında aynı Releases sayfasında şu adla yer alır:
+
+`RpiM_Studio_Beta_vX.Y.Z_macOS.dmg`
 
 ## Euler API kurulumu
 
@@ -29,9 +35,15 @@ API anahtarı yalnızca sizin cihazınızda saklanır.
 
 ## Güncellemeler
 
-Uygulama açılışta GitHub Releases alanını kontrol eder. Yeni sürüm varsa Ayarlar → Güncelleme bölümünden indirip kurabilirsiniz.
+Uygulama açılışta GitHub Releases alanını kontrol eder. İlk Beta sürümünden sonra numaralandırma şu şekilde devam eder:
 
-Yeni sürüm yayımlarken Release’e yalnız şu dosya adlarını ekleyin:
+- Beta v1.0.0
+- Beta v1.0.1
+- Beta v1.0.2
 
-- `RpiM_Studio_Beta_v1.0.0_Setup.exe`
-- `RpiM_Studio_macOS.dmg`
+Her sürümde Release etiketi `vX.Y.Z` olmalı ve yalnız işletim sistemine uygun kurulum dosyası yüklenmelidir:
+
+- Windows: `RpiM_Studio_Beta_vX.Y.Z_Setup.exe`
+- macOS: `RpiM_Studio_Beta_vX.Y.Z_macOS.dmg`
+
+Windows ve macOS dosyaları aynı yayın altında bulunabilir. Uygulama kendi işletim sistemine uygun paketi otomatik seçer.
