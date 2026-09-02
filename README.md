@@ -2,56 +2,42 @@
 
 TikTok LIVE yayınları için masaüstü kontrol uygulaması.
 
-## İndir — Beta v1.0.1
+## İndir — Beta v1.0.0
 
-Güncel dağıtım paketi GitHub Releases sayfasında iki işletim sistemi için ayrı dosya olarak bulunur:
+Güncel Windows kurulum paketi GitHub Releases sayfasında yayımlanır:
 
-- **Windows:** [RpiM_Studio_Beta_v1.0.1_Setup.exe](https://github.com/Wyzuee/RpiM-Studio/releases/download/V1.0.1/RpiM_Studio_Beta_v1.0.1_Setup.exe)
-- **macOS:** [RpiM_Studio_Beta_v1.0.1_macOS.dmg](https://github.com/Wyzuee/RpiM-Studio/releases/download/V1.0.1/RpiM_Studio_Beta_v1.0.1_macOS.dmg)
+- [RpiM_Studio_Beta_v1.0.0_Setup.exe](https://github.com/Wyzuee/RpiM-Studio/releases/download/v1.0.0/RpiM_Studio_Beta_v1.0.0_Setup.exe)
+
+SHA-256: 065c44d61f0f7cb33868e6122ba689b74116976bd3b2f7ac4918c7a3a24b517b
 
 [Tüm Releases sürümlerini görüntüle](https://github.com/Wyzuee/RpiM-Studio/releases)
 
-> Bu depo yalnızca yayın, kurulum ve güncelleme sayfasıdır. Kaynak kodu ve proje arşivleri yayımlanmaz; yalnızca Windows EXE ve macOS DMG dağıtılır.
+> Bu depo yayın, kurulum ve güncelleme sayfasıdır. Güncel ilk sürüm Windows EXE olarak sunulur.
 
 ## Kurulum
 
-### Windows
-
-1. Releases sayfasından `RpiM_Studio_Beta_v1.0.1_Setup.exe` dosyasını indirin.
+1. [RpiM Studio Beta v1.0.0 Releases](https://github.com/Wyzuee/RpiM-Studio/releases/tag/v1.0.0) sayfasından RpiM_Studio_Beta_v1.0.0_Setup.exe dosyasını indirin.
 2. Dosyayı çalıştırın ve kurulum sihirbazını tamamlayın.
 3. RπM Studio'yu açın, hesabınıza giriş yapın ve TikTok yayıncı adınızı kontrol edin.
 
-### macOS
-
-1. Releases sayfasından `RpiM_Studio_Beta_v1.0.1_macOS.dmg` dosyasını indirin.
-2. DMG'yi açıp **RπM Studio.app** uygulamasını Applications klasörüne sürükleyin.
-3. İlk açılışta macOS güvenlik uyarısı gösterirse Sistem Ayarları → Gizlilik ve Güvenlik bölümünden uygulamayı onaylayın.
-
 ## Euler API kurulumu
 
-1. Uygulamada **Ayarlar → Bağlantı** bölümünü açın.
-2. **Euler hesabı aç** düğmesiyle EulerStream hesabı oluşturun veya mevcut hesabınıza giriş yapın.
+1. Uygulamada Ayarlar → Bağlantı bölümünü açın.
+2. Euler hesabı aç düğmesiyle EulerStream hesabı oluşturun veya mevcut hesabınıza giriş yapın.
 3. EulerStream panelinden API anahtarınızı alın.
-4. Anahtarı uygulamadaki **Euler API Key** alanına yapıştırıp kaydedin.
-5. Ana ekranda **TikTok LIVE'a bağlan** düğmesine basın.
+4. Anahtarı uygulamadaki Euler API Key alanına yapıştırıp kaydedin.
+5. Ana ekranda TikTok LIVE'a bağlan düğmesine basın.
 
 API anahtarı yalnızca cihazınızda saklanır; GitHub'a gönderilmez.
 
 ## Güncellemeler
 
-Uygulama açılışta GitHub Releases alanını kontrol eder. **Ayarlar → Güncelleme** bölümünden de manuel kontrol başlatabilirsiniz. Yeni sürüm bulunduğunda uygulama önce sorar:
+Uygulama açılışta GitHub Releases alanını kontrol eder. Ayarlar → Güncelleme bölümünden manuel kontrol de başlatılabilir. Yeni sürüm bulunduğunda uygulama önce sorar:
 
-- **Güncelle ve Yükle:** işletim sisteminize uygun paketi indirir ve kurulumu başlatır.
-- **Şimdi Değil:** güncellemeyi erteleyip uygulamayı açık bırakır.
+- Güncelle ve Yükle: Windows için uygun EXE paketini indirir ve kurulumu başlatır.
+- Şimdi Değil: güncellemeyi erteleyip uygulamayı açık bırakır.
 
-Güncelleme dosyaları platforma göre seçilir; Windows uygulaması yalnızca EXE, macOS uygulaması yalnızca DMG arar. Yeni sürümler Beta v1.0.2, Beta v1.0.3 şeklinde devam eder.
-
-Dosya adlandırma kuralı:
-
-- Windows: `RpiM_Studio_Beta_vX.Y.Z_Setup.exe`
-- macOS: `RpiM_Studio_Beta_vX.Y.Z_macOS.dmg`
-
-Windows ve macOS paketleri aynı Release altında veya ayrı Releases altında yayımlanabilir. Uygulama kendi işletim sistemine uygun en yeni paketi seçer.
+Sonraki sürümler Beta v1.0.1, Beta v1.0.2 şeklinde devam eder. Windows paketleri RpiM_Studio_Beta_vX.Y.Z_Setup.exe kuralıyla adlandırılır.
 
 ## Uygulama görselleri
 
